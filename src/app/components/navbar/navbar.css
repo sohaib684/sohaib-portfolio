@@ -15,12 +15,44 @@
     justify-content: space-between;
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .logo {
-    font-size: 28px;
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 30px;
     font-weight: 800;
-    color: #22d3ee;
+    letter-spacing: -2px;
     text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s ease;
 }
+
+.logo span:first-child {
+    color: #22d3ee;
+}
+
+.logo span:nth-child(2) {
+    color: #f8fafc;
+}
+
+.logo b {
+    color: #22d3ee;
+    font-size: 34px;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.4));
+}
+
+
+/* =========================
+   DESKTOP NAV
+========================= */
 
 .nav-links {
     display: flex;
@@ -28,15 +60,36 @@
 }
 
 .nav-links a {
+    position: relative;
     color: #cbd5e1;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #22d3ee;
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #22d3ee;
 }
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   LET'S TALK
+========================= */
 
 .nav-button {
     text-decoration: none;
@@ -45,4 +98,86 @@
     padding: 9px 18px;
     border-radius: 6px;
     font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #22d3ee;
+    color: #08101e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(34, 211, 238, 0.25);
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid rgba(34, 211, 238, 0.4);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background: #22d3ee;
+    transition: all 0.3s ease;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+    }
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+    .nav-button {
+        display: none;
+    }
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px;
+        background: rgba(8, 15, 30, 0.97);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .nav-links a {
+        padding: 15px 5px;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .nav-links a::after {
+        display: none;
+    }
 }

@@ -1,14 +1,22 @@
 <nav class="navbar">
     <div class="container nav-container">
 
-        <a href="#home" class="logo">SA.</a>
+        <a href="#home" class="logo">
+            <span>S</span><span>A</span><b>.</b>
+        </a>
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" [class.active]="menuOpen">
+            <a href="#about" (click)="closeMenu()">About</a>
+            <a href="#skills" (click)="closeMenu()">Skills</a>
+            <a href="#experience" (click)="closeMenu()">Experience</a>
+            <a href="#projects" (click)="closeMenu()">Projects</a>
+            <a href="#contact" (click)="closeMenu()">Contact</a>
         </div>
 
         <a href="#contact" class="nav-button">Let's Talk</a>
