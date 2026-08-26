@@ -58,27 +58,11 @@
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 
-/* Email button */
-
-.primary-btn {
-    border: 2px solid #5ce4f6;
-    background: #5ce4f6;
-    color: white;
-}
-
-.primary-btn:hover {
-    background: transparent;
-    color: #5ce4f6;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
-}
-
-
-/* LinkedIn + GitHub */
+/* EmailLinkedIn + GitHub */
 
 .secondary-btn {
     border: 2px solid #5ce4f6;

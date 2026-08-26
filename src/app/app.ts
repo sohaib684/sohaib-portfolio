@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { Footer } from './footer/footer';
 import { About } from './components/about/about';
 import { Contact } from './components/contact/contact';
 import { Experience } from './components/experience/experience';
@@ -7,9 +8,10 @@ import { Navbar } from './components/navbar/navbar';
 import { Projects } from './components/projects/projects';
 import { Skills } from './components/skills/skills';
 
+
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Skills, Experience, Projects, Contact],
+  imports: [Navbar, Hero, About, Skills, Experience, Projects, Contact,Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
