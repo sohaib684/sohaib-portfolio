@@ -1,0 +1,31 @@
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 30px;
+    border: 1px solid #1e3a50;
+    border-radius: 12px;
+    background: rgba(15, 30, 50, 0.5);
+}
+
+.skill-card h3 {
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    padding: 8px 14px;
+    background: #102338;
+    color: #67e8f9;
+    border-radius: 5px;
+    font-size: 14px;
+}

@@ -1,1 +1,38 @@
+.contact {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
+.contact-container {
+    max-width: 750px;
+}
+
+.contact-number {
+    color: #22d3ee;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.contact h2 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.contact p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact .primary-btn,
+.contact .secondary-btn {
+    display: inline-block;
+}

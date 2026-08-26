@@ -22,3 +22,51 @@ body {
 section {
     padding: 100px 0;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .nav-button {
+        display: none;
+    }
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image {
+        margin-bottom: 30px;
+    }
+    .image-circle {
+        width: 200px;
+        height: 200px;
+        font-size: 50px;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .experience-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact h2 {
+        font-size: 38px;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
