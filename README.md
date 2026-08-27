@@ -1,7 +1,10 @@
 # Sohaib Portfolio
 
-To view my porfolio , check my live deployed application on https://sohaib-portfolio-indol.vercel.app/
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.15.
+To view my portfolio , check my live deployed application on https://sohaib-portfolio-indol.vercel.app/
+
+Frontend project build on HTML , CSS , TypeScript and Angular.
+
+```This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.15.```
 
 ## Development server
 
