@@ -1,15 +1,16 @@
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
 }
 
 .project-card {
+    min-width: 0;
     padding: 30px;
     border: 1px solid #1e3a50;
     border-radius: 12px;
     background: rgba(15, 30, 50, 0.5);
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
@@ -21,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     margin-bottom: 25px;
 }
 
@@ -28,6 +30,12 @@
     color: #22d3ee;
     font-size: 14px;
     font-weight: bold;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 .project-links a {
@@ -41,6 +49,7 @@
 
 .project-card h3 {
     font-size: 23px;
+    line-height: 1.2;
     margin-bottom: 15px;
 }
 
@@ -61,24 +70,81 @@
     font-size: 12px;
 }
 
-.section-title {
+
+/* =========================
+   PROJECT SECTION TITLE
+   ========================= */
+
+.project-card+.section-title {
     display: inline-block;
-    color: #e2e8f0;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 25px;
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 2px;
-    margin-top: 7px;
-    background: #22d3ee;
-    border-radius: 2px;
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+    .projects-grid {
+        gap: 20px;
+    }
+    .project-card {
+        padding: 25px;
+    }
+    .project-card h3 {
+        font-size: 21px;
+    }
 }
 
-.section-title:hover {
-    color: #67e8f9;
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .project-card {
+        width: 100%;
+        padding: 24px;
+    }
+    .project-top {
+        margin-bottom: 20px;
+    }
+    .project-card h3 {
+        font-size: 21px;
+    }
+    .project-card p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 480px) {
+    .projects-grid {
+        gap: 16px;
+    }
+    .project-card {
+        padding: 20px;
+    }
+    .project-card h3 {
+        font-size: 20px;
+    }
+    .project-card p {
+        font-size: 14px;
+    }
+    .project-tags {
+        gap: 6px;
+    }
+    .project-tags span {
+        font-size: 11px;
+    }
 }

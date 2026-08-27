@@ -6,67 +6,71 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background: #07111f;
     color: #f8fafc;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
     width: min(1100px, 90%);
-    margin: auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
+
+/* =========================
+   GLOBAL SECTION
+   ========================= */
 
 section {
-    padding: 100px 0;
+    width: 100%;
+    padding: 90px 0;
 }
 
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+    .container {
+        width: min(92%, 700px);
+    }
+    section {
+        padding: 75px 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .nav-button {
-        display: none;
-    }
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 50px;
-    }
-    .hero-content {
+    .container {
+        width: 90%;
         max-width: 100%;
     }
-    .hero-image {
-        margin-bottom: 30px;
+    section {
+        padding: 60px 0;
     }
-    .image-circle {
-        width: 200px;
-        height: 200px;
-        font-size: 50px;
+}
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 32px);
     }
-    .buttons {
-        justify-content: center;
-    }
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    .experience-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .contact h2 {
-        font-size: 38px;
-    }
-    .contact-buttons {
-        flex-direction: column;
-        align-items: center;
+    section {
+        padding: 50px 0;
     }
 }

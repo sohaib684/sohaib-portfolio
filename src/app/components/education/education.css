@@ -1,9 +1,11 @@
 .education-card {
+    width: 100%;
     padding: 30px;
     border: 1px solid #1e3a50;
     border-radius: 12px;
     background: rgba(15, 30, 50, 0.5);
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .education-card:hover {
@@ -23,6 +25,7 @@
     margin: 12px 0 6px;
     color: #f8fafc;
     font-size: 22px;
+    line-height: 1.3;
 }
 
 .education-content h4 {
@@ -36,26 +39,39 @@
     margin: 0;
     color: #94a3b8;
     font-size: 15px;
+    line-height: 1.7;
 }
 
-.section-title {
-    display: inline-block;
-    color: #e2e8f0;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 25px;
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+    .education-card {
+        padding: 24px;
+    }
+    .education-content h3 {
+        font-size: 20px;
+    }
+    .education-content h4 {
+        font-size: 15px;
+    }
+    .education-content p {
+        font-size: 14px;
+    }
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 2px;
-    margin-top: 7px;
-    background: #22d3ee;
-    border-radius: 2px;
-}
 
-.section-title:hover {
-    color: #67e8f9;
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 480px) {
+    .education-card {
+        padding: 20px;
+    }
+    .education-content h3 {
+        font-size: 19px;
+    }
 }
